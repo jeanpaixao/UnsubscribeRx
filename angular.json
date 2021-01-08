@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "UnsubscribeRx"
+    }
+  },
+  "defaultProject": "UnsubscribeRx",
+  "cli": {
+    "analytics": "17fd757b-574f-41dd-ad6f-547563cbe428"
+  }
 }
