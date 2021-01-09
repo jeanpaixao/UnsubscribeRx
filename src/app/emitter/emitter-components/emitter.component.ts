@@ -14,7 +14,9 @@ import { EmitterService } from '../emitter.service';
     <button type="button" class="btn btn-outline-primary" (click)="emitirValor(valor.value)">
        Emitir Valor
     </button>
-  </div>     
+    {{valor}}
+  </div>   
+
   <div  *ngIf="component">
     <app-emitter-poc1></app-emitter-poc1>
     <app-emitter-poc2></app-emitter-poc2>
@@ -23,6 +25,8 @@ import { EmitterService } from '../emitter.service';
   `,
 })
 export class EmitterComponent implements OnInit, OnDestroy {
+
+
 
 
   component: boolean;
@@ -38,12 +42,11 @@ export class EmitterComponent implements OnInit, OnDestroy {
   }
 
   emitirValor(valor: string) {
-    this.emissorService.emitirValor.
+    this.emissorService.emitirValor(valor);
   }
 
   ngOnDestroy() {
     console.log('componente destruído');
   }
-
 
 }

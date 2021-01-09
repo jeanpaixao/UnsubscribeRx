@@ -1,4 +1,5 @@
 import { Component, OnInit, Input, OnDestroy } from '@angular/core';
+import { EmitterService } from '../emitter.service';
 
 @Component({
   selector: 'app-emitter-base',
@@ -17,10 +18,12 @@ export class EmitterBaseComponent implements OnInit{
   @Input() nome: string;
   @Input() telefone: string;
 
-  constructor() { }
+  valor: string;
 
-  ngOnInit(): void {
-   
+  constructor(private emitterService: EmitterService) { }
+
+  ngOnInit(): void {  
+  
   }
 
 

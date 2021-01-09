@@ -9,15 +9,18 @@ import { EmitterService } from '../emitter.service';
 })
 export class EmitterPoc2Component implements OnInit, OnDestroy {
 
+  valor: string;
+
   constructor(private emitterService: EmitterService) { }
 
 
   ngOnInit(): void {
-    this.emitterService.getValor().pipe()
+    this.emitterService.getValor().subscribe(novoValor => this.valor = novoValor);
   }
 
   ngOnDestroy() {
     console.log('componente destruído');
+    this.emitterService.getValor()
   }
 
 
